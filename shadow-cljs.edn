@@ -1,0 +1,17 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src/dev"
+  "src/main"
+  "src/test"]
+
+ :dependencies
+ []
+
+ :builds
+ {:dev
+  {:target :browser
+   :modules {:main {:init-fn stest.core/init}}
+   :devtools
+   {:http-root "public"
+    :http-port 8080}
+    }}}
